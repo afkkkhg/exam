@@ -23,7 +23,7 @@ services:
   balancer:
     image: nginx:mainline-alpine3.21
     volumes:
-      - ./nginx:/etc/nginx/templates
+      - ./config/nginx:/etc/nginx/templates
       - ./frontend:/usr/share/nginx/html:ro
     ports:
       - "8080:80"
